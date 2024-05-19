@@ -40,11 +40,11 @@ app.post("/", function (req, res) {
 
       const imageUrl = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
 
-      res.write(`<h1>The weather is currently ${description} .</h1>`);
+      res.write(`The weather is currently ${description} .`);
       res.write(
-        `<h2>The temperature in ${query} is ${temp} degree celcius.</h2>`
+        `The temperature in ${query} is ${temp} degree celcius.`
       );
-      res.write(`<img src=${imageUrl} />`);
+      
       res.send();
     });
   });
